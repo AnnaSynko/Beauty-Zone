@@ -1,0 +1,11 @@
+/* Link */
+.link {
+    text-decoration: none;
+    color: var(--color-primary-dark);
+}
+
+.link:hover {
+    font-weight: 700;
+    color: var(--color-primary-light);
+    transition: color 0.2s;
+}

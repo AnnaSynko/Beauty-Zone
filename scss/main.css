@@ -1,43 +1,53 @@
+@charset "UTF-8";
 /* roboto-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Roboto';
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
 /* play-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Play';
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Play";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/play-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/play-v19-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
 /* play-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Play';
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Play";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/play-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/play-v19-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
 /* poppins-900 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 900;
-  src: url('../fonts/poppins-v21-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/poppins-v21-latin-900.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-section {
-  max-width: 1440px;
-  padding: 0 20px;
-}
 :root {
   --color-primary-light: #2b7fff;
   --color-primary-dark: #011c44;
@@ -47,6 +57,13 @@ section {
   --color-secondary-bsase: #dfdfdf;
 }
 
+/*Base or global styles*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -54,24 +71,12 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-.container {
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
+  margin-top: 0;
 }
 
 body {
   color: var(--color-primary-dark);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.16;
   font-size: 18px;
@@ -85,9 +90,8 @@ ul {
   margin: 0;
 }
 
-/* Button */
 .button {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   color: var(--color-secondary-light);
   background-color: var(--color-primary-light);
@@ -117,10 +121,14 @@ ul {
   transition: color 0.2s;
 }
 
-.header__address-icon:hover {
-  fill: var(--color-primary-light);
-  transition: color 0.2s;
-  stroke: var(--color-primary-light);
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 0 20px;
 }
 
 /*  Header section */
@@ -132,6 +140,7 @@ ul {
   padding: 32px 0;
   background-color: rgba(255, 255, 255, 0.25);
 }
+
 .header__container {
   height: 100%;
   max-height: 106px;
@@ -161,21 +170,20 @@ ul {
   fill: var(--color-primary-dark);
 }
 
+.header__address-icon:hover {
+  fill: var(--color-primary-light);
+  transition: color 0.2s;
+  stroke: var(--color-primary-light);
+}
+
 /* Hero section */
 .hero-section {
   padding-top: 124px;
   padding-bottom: 127px;
-  background: linear-gradient(
-      89.38deg,
-      #ffffff 30.62%,
-      rgba(255, 255, 255, 0.850898) 41.31%,
-      rgba(255, 255, 255, 0.193204) 58.65%,
-      rgba(255, 255, 255, 0) 72.78%
-    ),
-    url(/images/beautician.jpg);
+  background: linear-gradient(89.38deg, #ffffff 30.62%, rgba(255, 255, 255, 0.850898) 41.31%, rgba(255, 255, 255, 0.193204) 58.65%, rgba(255, 255, 255, 0) 72.78%), url(/images/beautician.jpg);
   background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 80% cover;
+  background-position: center top;
+  background-size: cover;
   /* transform: translateY(10px); */
 }
 
@@ -193,10 +201,11 @@ ul {
 }
 
 .title {
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
   font-weight: 700;
   font-size: 140px;
   line-height: 0.81;
+  margin: 0;
   color: var(--color-primary-light);
 }
 
@@ -208,7 +217,7 @@ ul {
 }
 
 .section-title {
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
   font-weight: 700;
   line-height: 1.11;
   font-size: 64px;
@@ -229,7 +238,6 @@ ul {
 }
 
 /* Description section */
-
 .description-section__container {
   display: flex;
   gap: 40px;
@@ -239,6 +247,7 @@ ul {
   max-width: 709px;
   padding-top: 40px;
 }
+
 .text-description {
   line-height: 1.73;
   font-size: 22px;
@@ -255,7 +264,8 @@ ul {
 
 .description-section__image:last-child {
   padding-top: 40px;
-  float: right; /* вирівнювання по правому краю */
+  float: right;
+  /* вирівнювання по правому краю */
 }
 
 .star-container {
@@ -296,7 +306,6 @@ ul {
   to {
     transform: rotate(180deg);
   } */
-
   0% {
     transform: rotate(0);
   }
@@ -308,28 +317,23 @@ ul {
     transform: rotate(180deg);
   }
 }
-
 /* Why_Me section */
-
 .whyWe-section {
-  background-image: linear-gradient(
-    38.2deg,
-    rgba(43, 127, 255, 0.2) 39.74%,
-    rgba(43, 127, 255, 0) 54.16%,
-    rgba(43, 127, 255, 0) 66.66%
-  );
+  background-image: url(/images/background-Why-we.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .whyWe-section__container {
-  max-width: 1060px;
   text-align: center;
-  margin-bottom: 96px;
+  padding: 72px;
 }
 
 .whyMe-title {
   max-width: 442px;
   margin: 0 auto;
   padding-bottom: 40px;
+  padding-top: 176px;
 }
 
 .whyWe-section__advantages {
@@ -341,7 +345,8 @@ ul {
   border-radius: 32px;
   max-width: 316px;
   max-height: 181px;
-  background-color: coral; /* тестовий фон*/
+  background-color: var(--color-secondary-light);
+  /* тестовий фон*/
 }
 
 .section-title.centered {
@@ -368,7 +373,6 @@ ul {
 }
 
 /* Procedures section */
-
 .procedures-title {
   max-width: 520px;
   margin: 0 auto;
@@ -379,6 +383,7 @@ ul {
   display: flex;
   gap: 32px;
   align-items: center;
+  max-width: 1216px;
 }
 
 /* Carousel */
@@ -411,18 +416,15 @@ ul {
 
 .procedure-list {
   display: flex;
-  gap: 16px;
-  position: relative;
+  margin-bottom: 32px;
+  max-width: 1064px;
+  align-items: center;
 }
 
 .procedure-img {
   border-radius: 4px 120px 4px 120px;
-  background-image: linear-gradient(
-    180.05deg,
-    rgba(1, 28, 68, 0) 48.53%,
-    rgba(1, 28, 68, 0.725825) 84.61%,
-    #011c44 101.39%
-  );
+  z-index: 1;
+  margin-right: 0;
 }
 
 .image {
@@ -431,11 +433,36 @@ ul {
   border-radius: 4px 120px 4px 120px;
 }
 
+/*Pagination*/
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.pagination__button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+}
+
+.pagination__button--active {
+  background-color: var(--color-secondary-text);
+}
+
 /* Contact section */
 .contacts-section__container {
   max-width: 1059px;
   margin-top: 96px;
   margin-bottom: 94px;
+}
+
+.input::-moz-placeholder {
+  color: var(--color-secondary-light);
+  font-size: 13px;
 }
 
 .input::placeholder {
@@ -481,6 +508,7 @@ footer {
   font-weight: 600;
   text-align: center;
   padding-bottom: 32px;
+  margin-bottom: auto;
 }
 
 .contact-map {
@@ -521,7 +549,8 @@ footer {
 .form-button {
   display: block;
   max-width: 282px;
-  margin: 0 auto; /* центрування кнопки*/
+  margin: 0 auto;
+  /* центрування кнопки*/
   margin-bottom: 8px;
 }
 
@@ -580,7 +609,7 @@ footer {
 
 .footer::after {
   position: absolute;
-  content: '';
+  content: "";
   background-repeat: no-repeat;
   /* bottom: 0; */
 }
@@ -594,7 +623,6 @@ footer {
 }
 
 /* Modal */
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -604,7 +632,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #011f4a66;
+  background-color: rgba(1, 31, 74, 0.4);
   padding: 32px 280px;
   transition: opacity 0.3s, visibility 0.3s;
 }
@@ -642,16 +670,15 @@ footer {
   flex-direction: column;
   gap: 40px;
   align-items: center;
-
 }
 
 .modal-title {
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
   font-weight: 700;
   font-size: 70px;
   color: var(--color-secondary-light);
   text-align: center;
-
+  margin-bottom: auto;
 }
 
 .modal-form-container {
@@ -662,4 +689,4 @@ footer {
   position: absolute;
   top: 42px;
   right: 42px;
-}
+}/*# sourceMappingURL=main.css.map */

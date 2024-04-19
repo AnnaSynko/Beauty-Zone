@@ -1,0 +1,18 @@
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: var(--color-secondary-light);
+    background-color: var(--color-primary-light);
+    border: 2px solid var(--color-primary-light);
+    max-width: 219px;
+    max-height: 103px;
+    border-radius: 53px;
+    cursor: pointer;
+    padding: 16px 32px;
+}
+
+.button:hover {
+    color: var(--color-primary-dark);
+    background-color: var(--color-secondary-bsase);
+    transition: background-color 0.2s;
+}
